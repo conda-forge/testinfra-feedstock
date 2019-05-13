@@ -1,5 +1,5 @@
 {% set name = "testinfra" %}
-{% set version = "3.0.3" %}
+{% set version = "1.19.0" %}
 
 package:
   name: {{ name|lower }}
