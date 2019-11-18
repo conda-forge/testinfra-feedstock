@@ -1,5 +1,5 @@
 {% set name = "testinfra" %}
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5cebf61fee13c2e83b5e177431e751e243fc779293377c5e0c3b43910bb7e870
+  sha256: 8de4772bf4749b1d1985360caa20593314b5bb4df85ccfbdf8788ac317b53a18
 
 build:
   noarch: python
