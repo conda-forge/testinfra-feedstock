@@ -1,5 +1,5 @@
 {% set name = "testinfra" %}
-{% set version = "3.3.0" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 780e6c2ab392ea93c26cee1777c968a144c2189a56b3e239a3a66e6d256925b5
+  sha256: b603bf25db98a6c5f13660c4197e73fa29722c6551bdf054f6eeadf8ef81541a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Test infrastructures'
+  summary: Test infrastructures
 
   description: |
     With Testinfra you can write unit tests in Python
