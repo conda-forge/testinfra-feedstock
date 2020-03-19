@@ -1,5 +1,5 @@
 {% set name = "testinfra" %}
-{% set version = "3.3.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 780e6c2ab392ea93c26cee1777c968a144c2189a56b3e239a3a66e6d256925b5
+  sha256: 58a73ca24e889680ce39d6964f39cebc8363fa68bb9c125ee4a182909ca6fe95
 
 build:
   noarch: python
@@ -16,15 +16,14 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.4
     - pip
     - setuptools_scm
-    - pytest 4.4.1
-    - six 1.10.0
-  run:
-    - python
     - pytest !=3.0.2
-    - six >=1.4
+
+  run:
+    - python >=3.4
+    - pytest !=3.0.2
 
 test:
   imports:
